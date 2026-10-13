@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="MODA — zamonaviy kiyim-kechak do‘koni">
+  <title>MODA — Online Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="MODA home"><span class="brand-mark">M</span><span>MODA<span class="brand-dot">.</span><small>ONLINE STORE</small></span></a>
+      <div class="top-actions">
+        <span class="delivery-note"><span class="status-dot"></span><span data-i18n="delivery">Butun O‘zbekiston bo‘ylab</span></span>
+        <button class="lang-toggle" data-action="language" aria-label="Change language">UZ <span>⌄</span></button>
+        <button class="icon-button cart-top" data-action="open-cart" aria-label="Open cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 11.1a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 9H6"/><circle cx="9.5" cy="20" r="1"/><circle cx="17.5" cy="20" r="1"/></svg><span class="cart-count" id="cart-count">0</span></button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="heroEyebrow">YANGI MAVSUM · 2026</span></div>
+          <h1 data-i18n="heroTitle">Uslub — bu<br><em>o‘zing bo‘lish.</em></h1>
+          <p data-i18n="heroText">Har kun uchun tanlangan kiyimlar. Soddalik, sifat va o‘ziga xoslik bir joyda.</p>
+          <button class="primary-button hero-cta" data-action="scroll-products"><span data-i18n="heroCta">Kolleksiyani ko‘rish</span><span aria-hidden="true">↗</span></button>
+          <div class="hero-footnote"><span class="hero-index">01 / 04</span><span class="hero-footnote-line"></span><span data-i18n="heroFoot">YANGI KELGANLAR</span></div>
+        </div>
+        <div class="hero-visual" aria-label="Fashion collection">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1400&q=90&fit=crop" alt="Yangi mavsum kiyimlari" fetchpriority="high">
+          <div class="hero-sticker"><span>NEW</span><b>DROP</b><small>№ 06 / 26</small></div>
+          <div class="hero-photo-caption"><span data-i18n="heroCaption">CITY ESSENTIALS</span><span>—</span><span>MODA STUDIO</span></div>
+        </div>
+      </section>
+
+      <section class="collection-head" id="products">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="collectionEyebrow">SIZ UCHUN TANLANDI</span></div><h2 data-i18n="collectionTitle">Kashf eting<span class="brand-dot">.</span></h2></div>
+        <p data-i18n="collectionText">Sevimli obrazingizni toping — qolganini bizga qo‘ying.</p>
+      </section>
+
+      <section class="shop-tools" aria-label="Product filters">
+        <label class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg><input id="search" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="Mahsulot qidirish..." autocomplete="off"><kbd>⌘ K</kbd></label>
+        <div class="sort-wrap"><span data-i18n="sortLabel">Saralash:</span><select id="sort-select" aria-label="Sort products"><option value="popular" data-i18n="sortPopular">Tavsiya etilgan</option><option value="price-asc" data-i18n="sortLow">Arzonidan</option><option value="price-desc" data-i18n="sortHigh">Qimmatidan</option><option value="new" data-i18n="sortNew">Yangilari</option></select></div>
+      </section>
+      <nav class="category-row" id="categories" aria-label="Categories"></nav>
+      <div class="results-line"><span id="result-count">8 ta mahsulot</span><button data-action="clear-filters" class="clear-filters" id="clear-filters" hidden data-i18n="clearFilters">Filtrlarni tozalash ×</button></div>
+      <section class="product-grid" id="product-grid" aria-live="polite"><div class="loading-state" data-i18n="loading">Katalog yuklanmoqda...</div></section>
+      <section class="bottom-promo"><div class="promo-symbol">✳</div><div><span class="eyebrow" data-i18n="promoEyebrow">MODA COMMUNITY</span><h3 data-i18n="promoTitle">Kamroq, lekin yaxshiroq.</h3><p data-i18n="promoText">Uzoq vaqt kiyiladigan, o‘zingizga mos tanlovlar.</p></div><button class="text-button" data-action="scroll-products"><span data-i18n="promoCta">Katalogga qaytish</span> ↗</button></section>
+    </main>
+    <footer class="footer"><a class="brand brand-small" href="#top"><span class="brand-mark">M</span><span>MODA<span class="brand-dot">.</span></span></a><span data-i18n="footerText">Yaxshi uslub — mayda detallardan boshlanadi.</span><span>© 2026 MODA STUDIO</span></footer>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Main navigation">
+    <button class="mobile-nav-item active" data-action="nav-catalog"><span>⌂</span><small data-i18n="navShop">Do‘kon</small></button>
+    <button class="mobile-nav-item" data-action="show-favorites"><span>♡</span><small data-i18n="navSaved">Saqlangan</small></button>
+    <button class="mobile-nav-item mobile-cart" data-action="open-cart"><span>▱<i id="nav-cart-count">0</i></span><small data-i18n="navCart">Savatcha</small></button>
+  </nav>
+
+  <div class="overlay" id="overlay" data-action="close-overlays"></div>
+  <section class="product-modal" id="product-modal" role="dialog" aria-modal="true" aria-label="Product details"></section>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart"></aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
